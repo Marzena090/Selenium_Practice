@@ -12,7 +12,7 @@ public class AngelfishListPage {
     @FindBy(css = "a.Button[href$='EST-2']")
     private WebElement addSmallFishToCartLink;
 
-    public void AngelfishListPage(WebDriver driver){
+    public AngelfishListPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

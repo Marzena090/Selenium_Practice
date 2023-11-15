@@ -11,7 +11,7 @@ public class ShoppingCartPage {
     @FindBy(css = "a[href$='newOrderForm=']")
     private WebElement proceedToCheckoutBtn;
 
-    public void ShoppingCartPage(WebDriver driver){
+    public ShoppingCartPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
