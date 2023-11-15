@@ -12,7 +12,7 @@ public class LandingPage {
     @FindBy(xpath = "//div['content']/p/a")
     private WebElement enterStoreLink;
 
-    public void LandingPage(WebDriver driver){
+    public LandingPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

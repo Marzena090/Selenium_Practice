@@ -11,7 +11,7 @@ public class MainPage {
     @FindBy(css = "area[alt='Fish']")
     private WebElement enterFishListPage;
 
-    public void MainPage(WebDriver driver){
+    public MainPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
