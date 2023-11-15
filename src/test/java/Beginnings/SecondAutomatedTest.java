@@ -1,3 +1,5 @@
+package Beginnings;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +9,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class FirstAutomatedTest {
+public class SecondAutomatedTest {
     private WebDriver driver;
 
     @BeforeMethod
@@ -16,17 +18,14 @@ public class FirstAutomatedTest {
         driver = new ChromeDriver();
     }
 
+
     @Test
-    public void myFirstTest() {
-        driver.get("https://duckduckgo.com/");
-
-        driver.findElement(By.name("q")).sendKeys("JavaStart");
-        driver.findElement(By.name("q")).submit();
-
-        String pageTitle = driver.getTitle();
-
-        assertTrue(pageTitle.contains("JavaStart"));
+    public void mySecondTest(){
+        driver.get("https://selenium.dev/");
+        String siteTitle = driver.getTitle();
+        assertTrue(siteTitle.equals("Selenium"));
     }
+
 
     @AfterMethod
     public void afterTest() {

@@ -1,4 +1,4 @@
-// ZADANIE Z SELENIUM - POLSKI KURS
+package Beginnings;// ZADANIE Z SELENIUM - POLSKI KURS
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
