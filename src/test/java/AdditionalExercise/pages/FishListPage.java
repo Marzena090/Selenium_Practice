@@ -9,7 +9,7 @@ public class FishListPage {
 
     private WebDriver driver;
 
-    @FindBy(linkText = "FI-SW-01")
+    @FindBy(css = "tr:nth-child(2) a")
     private WebElement angelfishId;
 
     public FishListPage(WebDriver driver){
