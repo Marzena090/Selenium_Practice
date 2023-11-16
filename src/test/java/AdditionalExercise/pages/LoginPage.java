@@ -11,8 +11,16 @@ public class LoginPage {
     @FindBy(css = "area[alt='Fish']")
     private WebElement enterFishListPage;
 
+    @FindBy(css = "#Content ul[class='messages'] li")
+    private WebElement warningMessage;
+
     public LoginPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
+    }
+
+    public String getWarningMessage(){
+        String warningMsg = warningMessage.getText();
+        return warningMsg;
     }
 }
