@@ -7,18 +7,15 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-    public WebDriver driver;
-
     @BeforeMethod
     public void beforeTest(){
-        System.setProperty("webdriver.chrome.driver", "C:/Users/marze/Documents/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get("https://przyklady.javastart.pl/jpetstore/");
+        DriverManager.getWebDriver();
+        DriverUtils.setInitialConfig();
+        DriverUtils.navigateToPage("http://przyklady.javastart.pl/jpetstore/");
     }
 
     @AfterMethod
     public void afterTest(){
-        driver.close();
-        driver.quit();
+        DriverManager.disposeDriver();
     }
 }
